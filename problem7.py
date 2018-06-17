@@ -14,11 +14,16 @@ prime=0
 for i in count(0,6):
     if is_prime(i-1):
         prime+=1
+        if prime>=top:
+            print(i-1)
+            break
     if is_prime(i+1):
         prime+=1
-    if prime>top-1:
-        break
-print(i+1)
+        if prime>=top:
+            print(i+1)
+            break
+
+
 
 
 
