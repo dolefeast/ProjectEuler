@@ -5,11 +5,10 @@ class Breaker(Exception):
 p=1000
 t0=time()
 try:
-    for a in range(1,p//2):
-        for c in range(1,p-2*a):
-            b=p-a-c
-            if a*b==p**2//2-p*c: #proven mathematically
-                print(a*b*c, time()-t0)
+    for m in range(1, p):
+        for n in range(1, m):
+            if 2 * m ** 2 + 2 * m * n  == p:
+                print(2*m**5*n - 2*m*n**5)
                 raise Breaker
 except Breaker:
     pass
