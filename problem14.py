@@ -9,5 +9,4 @@ def collatz_len(n):
         cont+=1
     return cont+1
 top = 10 ** 6
-result = []
 print(max(range(2, top), key=collatz_len))
