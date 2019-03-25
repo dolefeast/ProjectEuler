@@ -1,4 +1,3 @@
-from time import sleep
 def ld(p, q):
     while p<q:
         p *= 10
