@@ -1,17 +1,14 @@
 from itertools import count
-def lcm(*args):
-    print(args)
-    if len(args) == 1:
-        return args[0]
-    elif len(args) == 2:
-        n = min(args[0])
-        for k in count(1):
-            if not (k * n)%max(args[0]):
-                return k * n
-    else:
-        return lcm(lcm(args[:len(args)//2]), lcm(args[len(args)//2:]))
 
-
-
-while True:
-    print(eval(input(">>>")))
+def lcm(values):
+    n = max(values)
+    for i in count(1):
+        if not (n * i)%min(values):
+            return n * i
+    
+value = 1
+i = 20
+a = (2, 1)
+for j in range(1, 20):
+    a = (j, lcm(a))
+print(lcm(a))
