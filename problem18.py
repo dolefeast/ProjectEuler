@@ -24,8 +24,8 @@ piramid = [[int(j) for j in i.split(" ")] for i in piramid]
 
 values = []
 for i in product([0, 1], repeat = 14):
-    cont = 0
-    v = acumulate(i)
-    values.append(sum([piramid[j][next(v)] for j in range(1, len(piramid))]) + 75)
+        cont = 0
+        v = acumulate(i)
+        values.append(sum([piramid[j][next(v)] for j in range(1, len(piramid))]) + 75)
 
 print(max(values))
