@@ -1,0 +1,17 @@
+function [ x ] = remontada( A, b )
+%calcula la solucion de un sistema triangular superior
+%   Detailed explanation goes here
+if ~istriu(A)
+    ME = MException('A no es triangular');
+    throw(ME)
+end
+
+n  = length(b);
+x = [];
+for k=n:-1:1
+    
+    for l=n:-1:n-k
+       
+
+end
+
